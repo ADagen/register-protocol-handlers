@@ -1,5 +1,5 @@
 <html>
-  <body>
+  <head>
     <script>
       function registerSchema() {
         navigator.registerProtocolHandler(
@@ -9,10 +9,14 @@
         )
       }
       document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(registerSchema, 500)
-        
+        setTimeout(registerSchema, 500);
+        document.getElementById('request').addEventListener('click', registerSchema)
       })
     </script>
+  </head>
+  <body>
+    v2
+    <div color="darkred" id="request">Request permission</div>
     Now you should proceed to detail account view and click to "Trade in Webterminal": <br />
     <a href="https://front-pa-3-0.herokuapp.com/accounts/8888">https://front-pa-3-0.herokuapp.com/accounts/8888</a>
   </body>
