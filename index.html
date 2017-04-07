@@ -1,14 +1,19 @@
 <html>
   <body>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
+      function registerSchema() {
         navigator.registerProtocolHandler(
           'web+exness+demo',
           'https://dagen-niger.github.io/register-protocol-handlers/?uri=%s',
           'test custom protocol handler'
         )
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(registerSchema, 500)
+        
       })
     </script>
-    Now you should proceed to detail account view and click to "Trade in Webterminal": https://front-pa-3-0.herokuapp.com/accounts/8888
+    Now you should proceed to detail account view and click to "Trade in Webterminal": <br />
+    <a href="https://front-pa-3-0.herokuapp.com/accounts/8888">https://front-pa-3-0.herokuapp.com/accounts/8888</a>
   </body>
 </html>
